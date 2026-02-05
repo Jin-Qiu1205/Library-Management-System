@@ -1,0 +1,252 @@
+/* Page layout */
+.page {
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+/* Hero */
+.hero {
+  margin-bottom: 18px;
+  padding: 10px 0 6px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-weight: 650;
+  font-size: 13px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.subtitle {
+  margin-top: 6px;
+  opacity: 0.85;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: 16px;
+}
+
+@media (max-width: 880px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Card */
+.card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(10px);
+  padding: 16px;
+}
+
+.cardHeader {
+  margin-bottom: 12px;
+}
+
+.cardHeader.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.muted {
+  opacity: 0.75;
+}
+
+strong {
+  opacity: 0.95;
+}
+
+/* Form */
+.form {
+  display: grid;
+  gap: 12px;
+}
+
+.field label {
+  display: block;
+  font-weight: 650;
+  margin-bottom: 6px;
+  opacity: 0.95;
+}
+
+.field input {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(0, 0, 0, 0.18);
+  color: rgba(255, 255, 255, 0.92);
+  padding: 10px 12px;
+  outline: none;
+}
+
+.field input::placeholder {
+  opacity: 0.55;
+}
+
+.field input:focus {
+  border-color: rgba(255, 59, 92, 0.65);
+  box-shadow: 0 0 0 4px rgba(255, 59, 92, 0.18);
+}
+
+.error {
+  display: block;
+  margin-top: 6px;
+  font-size: 12px;
+  color: rgba(255, 145, 145, 0.95);
+}
+
+/* Buttons */
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.btn {
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  padding: 10px 14px;
+  font-size: 14px;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+
+  background: linear-gradient(135deg, #ff3b5c, #ff7a59);
+  box-shadow: 0 10px 24px rgba(255, 59, 92, 0.18);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 28px rgba(255, 59, 92, 0.24);
+}
+
+.btn:active {
+  transform: translateY(0px);
+  opacity: 0.95;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.btn.secondary {
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: none;
+}
+
+.btn.secondary:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-1px);
+}
+
+.btn.small {
+  padding: 8px 12px;
+  font-size: 13px;
+}
+
+/* Notices */
+.notice {
+  margin-top: 10px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.notice.success {
+  border-color: rgba(90, 255, 170, 0.25);
+  background: rgba(90, 255, 170, 0.08);
+}
+
+.notice.error {
+  border-color: rgba(255, 90, 90, 0.25);
+  background: rgba(255, 90, 90, 0.08);
+}
+
+.notice.warn {
+  border-color: rgba(255, 208, 90, 0.25);
+  background: rgba(255, 208, 90, 0.08);
+}
+
+/* Table */
+.tableWrap {
+  overflow: auto;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.bookTable {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 520px;
+}
+
+.bookTable th,
+.bookTable td {
+  padding: 12px 12px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.bookTable th {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  opacity: 0.8;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.bookTable tr:hover td {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.titleCell {
+  font-weight: 750;
+}
+
+/* Empty state */
+.empty {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 16px;
+  border: 1px dashed rgba(255, 255, 255, 0.18);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.emptyIcon {
+  font-size: 24px;
+}
+
+.emptyTitle {
+  font-weight: 750;
+}
+
+/* Footer */
+.footer {
+  margin-top: 14px;
+  padding: 10px 4px;
+  font-size: 13px;
+}
